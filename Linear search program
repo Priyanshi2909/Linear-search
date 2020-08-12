@@ -1,0 +1,43 @@
+
+PROGRAM-1	
+Question: Write a program for implementation of Linear Search.
+Algorithm:
+Step 1: i=0,found=0 Step 2: while(i<n) do
+Step 3:	if(a[i]=k) then
+Step 4:	pos=i
+Step 5:	print “successful at pos”
+Step 6:		found=1 Step 7:	end if
+Step 8:	i=i+1 Step 9: end while
+Step 10: if(found==0) then
+Step 11:	print “unsuccessful” Step 12: end if
+Step 13: exit
+
+Program:
+#include<stdio.h> #include<conio.h> #include<stdlib.h> void main()
+{
+int a[6],n,k,pos,i=0,j=0,found=0; clrscr();
+printf("Enter size of array for linear sort:"); scanf("%d",&n);
+printf("\nEnter elements:"); for(i=0;i<n;i++)
+{ scanf("%d",&a[i]);
+}
+ 
+printf("\nThe elements are:"); for(i=0;i<n;i++)
+{ printf("%d\t",a[i]);
+}
+printf("\nEnter element to be searched:"); scanf("%d",&k);
+while(j<n)
+{
+if(a[j]==k)
+{ pos=j;
+printf("\nElement found at position %d", pos); found=1;
+}
+j=j+1;
+}
+if(found==0)
+{ printf("\nElement not found");
+}
+getch();
+}
+
+
+
